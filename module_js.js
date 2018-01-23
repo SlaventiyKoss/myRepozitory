@@ -15,19 +15,21 @@ typeStats(arr);
 
 // Intersect (2)
 
-var a = [1,2,3,4];
-var b = [3,4,5,6];
-function intersect(a, b){
-	var arr = [];
-	for(i=0; i<arr.lenth; i++){
-		if()
-	arr.push(a[i]);
-	}
-	return arr;
-};
+function intersect(arr1, arr2) {
+  var initial = []
+  arr1.forEach(el1 => {
+    if (arr2.some(el2 => el2 == el1 ))
+      initial.push(el1);
+  })
+  return initial;
+}
+
+var a = [1,2,3,4]
+var b = [3,4,5,6]
 intersect(a,b);
 
 // oddEvenClass (3)
+
 function oddEvenClass(querySet, class1, class2) {
 	var _isOdd = false;
 	for (var child of querySet.children) {
@@ -39,6 +41,7 @@ var table = document.querySelector('#table tbody')
 oddEvenClass(table, 'dark', 'light')
 
 // UpScroll (4)
+
 function upScroll(elem) {
   var _isUp = false;
   var _tmpEl;
@@ -59,3 +62,4 @@ var btn = document.getElementById('btn');
 upScroll(btn)
 
 // Tabs (5)
+// 
